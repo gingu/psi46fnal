@@ -23,6 +23,8 @@
 #include "pixelmap.h"
 #include "test.h"
 #include "chipdatabase.h"
+#include "Nucleus.h"                   // CG
+#define DEBUG_NODTB false               // CG
 
 #define VERSIONINFO TITLE " " VERSION " (" TIMESTAMP ")"
 
@@ -34,6 +36,7 @@ extern CTestboard tb;
 extern CSettings settings;  // global settings
 extern CProber prober; // prober
 extern CProtocol Log;  // log file
+extern CNucleus prober_nucleus;        // CG
 
 extern CChip g_chipdata;
 

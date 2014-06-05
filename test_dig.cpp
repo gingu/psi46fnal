@@ -429,7 +429,7 @@ int test_i2c()
 
 void test_readback()
 { PROFILING
-	if ((settings.proberPort >= 0) && (g_chipdata.mapPos != 3)) return;
+	if (((settings.proberPort >= 0) || (settings.proberPort == -2)) && (g_chipdata.mapPos != 3)) return; // CG
 
 	tb.Pg_SetCmd(0, PG_TOK);
 

@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <SccProjectName />
     <SccLocalPath />
+    <ProjectGuid>{754FE42A-E378-C47F-77C5-6728CD97C5B7}</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -24,6 +25,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>NotSet</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -94,16 +96,19 @@
       <AdditionalLibraryDirectories>$(ROOTSYS)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <CustomBuildStep>
-      <Command>rpcgen pixel_dtb.h -hrpc_calls.cpp</Command>
+      <Command>
+      </Command>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Message>Create RPC Calls</Message>
+      <Message>Create RPC Calls -&gt; removed by CG CommandLine=rpcgen pixel_dtb.h -hrpc_calls.cpp, Outputs=rpc_calls.cpp, AdditionalDependencies=pixel_dtb.h</Message>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Outputs>rpc_calls.cpp</Outputs>
+      <Outputs>
+      </Outputs>
     </CustomBuildStep>
     <CustomBuildStep>
-      <Inputs>pixel_dtb.h</Inputs>
+      <Inputs>
+      </Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -169,6 +174,7 @@
     <ClCompile Include="error.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="histo.cpp" />
+    <ClCompile Include="Nucleus.cpp" />
     <ClCompile Include="pipe.cpp" />
     <ClCompile Include="pixelmap.cpp" />
     <ClCompile Include="plot.cpp" />
@@ -206,6 +212,7 @@
     <ClInclude Include="error.h" />
     <ClInclude Include="file.h" />
     <ClInclude Include="htable.h" />
+    <ClInclude Include="Nucleus.h" />
     <ClInclude Include="pipe.h" />
     <ClInclude Include="pixelmap.h" />
     <ClInclude Include="plot.h" />

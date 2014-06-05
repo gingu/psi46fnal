@@ -1482,5 +1482,7 @@ CMD_PROC(gettemp)
 	printf("REF: %d\n",ref);
 	printf("VAL: %d\n",val);
 	printf("DIFF: %d\n",val - ref);
+
+	return true; // CG error C4716: 'cmd_gettemp' : must return a value
 }
 

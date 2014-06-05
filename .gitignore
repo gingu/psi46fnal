@@ -18,6 +18,6 @@ bin
 *.bak
 psi46test
 *.d
-rpcgen/rpcgen
+#rpcgen/rpcgen commented out by CG 06.05.2014
 *.swp
 rpc_calls.cpp

@@ -150,7 +150,8 @@ void CChip::Invalidate()
 
 	multi = 0;
 	nEntry = 0;
-	productId[0]=waferId[0]=waferNr[0]=chipId[0]=0;
+	//productId[0]=waferId[0]=waferNr[0]=chipId[0]=0; // CG
+	chipId[0]=0;                                      // CG
 	mapX = mapY = mapPos = 0;
 	startTime[0] = endTime[0] = 0;
 	frequency = -1;

@@ -34,7 +34,7 @@ public:
 	int  dtbId;             // force to open special board (-1 = any connected board)
 	std::string scriptPath; // script path
 
-	int  proberPort;	    // prober serial port nr (-1 = no prober)
+	int  proberPort;	    // prober serial port nr (-1 = no prober), CG -2 = Nucleus Probe Station (DDE communication)
 
 	int rocType;            // 0 = analog ROC, 1 = digital ROC
 	bool sensor; 		    // sensor mounted

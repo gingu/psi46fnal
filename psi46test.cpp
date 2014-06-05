@@ -28,6 +28,7 @@ CTestboard tb;
 CSettings settings;  // global settings
 CProber prober;
 CProtocol Log;
+CNucleus prober_nucleus = CNucleus();  // CG
 
 
 
@@ -105,6 +106,7 @@ int main(int argc, char* argv[])
 		}
 
 		// --- open prober ------------------------------------
+		// CG port_prober 0 to 99 are reserved for RS232
 		if (settings.proberPort>=0)
 			if (!prober.open(settings.proberPort))
 			{
@@ -113,6 +115,22 @@ int main(int argc, char* argv[])
 				Log.puts("Prober: could not open port\n");
 				return 4;
 			}
+		// CG port_prober -2 is reserved Cascade Microtech Station with Nucleus Software
+		if (settings.proberPort==-2)
+		{
+			prober_nucleus.Open();
+			if (prober_nucleus.GetError())
+			{
+				printf("Prober Nucleus: could not open DDE conversation\n");
+				Log.puts("Prober Nucleus: could not open DDE conversation\n");
+				return 4;
+			}
+			else
+			{
+				printf("Prober Nucleus: open DDE conversation ok\n");
+				Log.puts("Prober Nucleus: open DDE conversation ok\n");
+			}
+		}
 
 		Log.flush();
 

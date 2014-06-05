@@ -22,7 +22,7 @@
 
 void cmdHelp()
 {
-	if (settings.proberPort >= 0)
+	if ((settings.proberPort >= 0) || (settings.proberPort == -2)) // CG
 	{
 	 fputs("\n"
 	 "+-- control commands ------------------------------------------+\n"
@@ -92,6 +92,7 @@ void cmd()
 		catch (CRpcError e)
 		{
 			e.What();
+			tb.Poff(); // CG 
 		}
 	}
 }
